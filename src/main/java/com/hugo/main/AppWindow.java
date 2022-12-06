@@ -1,5 +1,7 @@
 package com.hugo.main;
 
+import com.hugo.synth.SynthPanel;
+
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
@@ -13,7 +15,7 @@ public class AppWindow extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(appPanel);
         pack();
-        //setResizable(false);
+        setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
         addWindowFocusListener(new WindowFocusListener() {
@@ -25,6 +27,27 @@ public class AppWindow extends JFrame {
             @Override
             public void windowLostFocus(WindowEvent e) {
                 appPanel.getApp().windowFocusLost();
+            }
+        });
+    }
+
+    public AppWindow(SynthPanel synthPanel) {
+        setTitle(System.getProperty("os.name") + " (" + TITLE + ") " + synthPanel.getWidth() + " x " + synthPanel.getHeight());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        add(synthPanel);
+        pack();
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setVisible(true);
+        addWindowFocusListener(new WindowFocusListener() {
+            @Override
+            public void windowGainedFocus(WindowEvent e) {
+                synthPanel.getApp().windowGainedFocus();
+            }
+
+            @Override
+            public void windowLostFocus(WindowEvent e) {
+                synthPanel.getApp().windowFocusLost();
             }
         });
     }

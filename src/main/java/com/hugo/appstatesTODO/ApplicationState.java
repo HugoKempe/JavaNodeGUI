@@ -2,7 +2,7 @@ package com.hugo.appstatesTODO;
 
 public enum ApplicationState {
 
-    USING, MENU, TESTING, OPTIONS, QUIT;
+    SYNTH, SYNTH2, USING, MENU, TESTING, OPTIONS, QUIT;
 
-    public static ApplicationState state = TESTING;
+    public static ApplicationState state = SYNTH2;
 }

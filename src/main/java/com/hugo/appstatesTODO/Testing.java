@@ -26,12 +26,12 @@ public class Testing extends State implements StateMethods {
     @Override
     public void update() {
         nodeManager.update();
-        ticks++;
+/*        ticks++;
         if (ticks % 10 == 1) {
             tempVal += 0.1;
             nodeManager.getTestNode(0).setInputValue(0, tempVal % 100);
             ticks = 0;
-        }
+        }*/
     }
 
     @Override

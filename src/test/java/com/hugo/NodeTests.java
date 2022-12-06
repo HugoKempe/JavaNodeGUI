@@ -1,11 +1,7 @@
 package com.hugo;
 
-import com.hugo.nodes.MathNode;
-import com.hugo.nodes.ValueNode;
-import javafx.beans.binding.DoubleBinding;
-import javafx.beans.value.ObservableDoubleValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.hugo.nodesOld.MathNode;
+import com.hugo.nodesOld.ValueNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
